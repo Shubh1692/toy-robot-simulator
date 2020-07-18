@@ -134,8 +134,8 @@ export class AppComponent {
     const toyTableWidth = this.toyTableInstance._element.nativeElement.offsetWidth;
     const left = Number(this.toyPosition.left.split('px')[0]);
     const bottom = Number(this.toyPosition.bottom.split('px')[0]);
-    const xPosition = (((left * 100) / toyTableWidth) / 20) + 1;
-    const yPosition = (((bottom * 100) / toyTableHeight) / 20) + 1;
+    const xPosition = Math.floor((((left * 100) / toyTableWidth) / 20)) + 1;
+    const yPosition = Math.floor((((bottom * 100) / toyTableHeight) / 20)) + 1;
     switch (this.face) {
       case 0:
         face = 'North';
