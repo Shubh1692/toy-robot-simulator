@@ -2,7 +2,7 @@
   <!--App header with placement button-->
   <mat-toolbar-row class="main-toolbar">
     <span>Toy Simulator App</span>
-    <button mat-raised-button color="accent" (click)="openPlaceDialog()">
+    <button [disabled]="face"  mat-raised-button color="accent" (click)="openPlaceDialog()">
       Place
     </button>
   </mat-toolbar-row>
