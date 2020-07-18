@@ -1,0 +1,17 @@
+<!-- This list used for to show current state of toy-->
+<mat-nav-list (click)="onClose()">
+    <div class="list-item" mat-list-item>
+        <span mat-line><strong>Position X</strong></span>
+        <span mat-line [innerText]="data.xPosition"></span>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-item" mat-list-item>
+        <span mat-line><strong>Position Y</strong></span>
+        <span mat-line [innerText]="data.yPosition"></span>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-item" mat-list-item>
+        <span mat-line><strong>Face</strong></span>
+        <span mat-line [innerText]="data.face"></span>
+    </div>
+</mat-nav-list>

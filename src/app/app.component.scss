@@ -1,0 +1,35 @@
+.toy-table {
+  position: relative;
+  max-width: 500px;
+  max-height: 500px;
+  padding: 5px;
+  margin: auto;
+  .toy-tile {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  mat-grid-tile {
+    background-color: red;
+  }
+}
+.main-toolbar {
+  justify-content: space-between;
+}
+.secondary-toolbar {
+  justify-content: flex-end;
+  button {
+    padding: 0px;
+  }
+  .mr-5 {
+    margin-right: 5px;
+  }
+  .ml-5 {
+    margin-left: 5px;
+  }
+}
+

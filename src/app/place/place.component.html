@@ -1,0 +1,40 @@
+<!--This form used for set placement values of toy-->
+<form [formGroup]="placeForm" (ngSubmit)="onSubmit()">
+    <h1 mat-dialog-title>Place the toy</h1>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>X Position</mat-label>
+            <input matInput type="number" formControlName="x">
+            <!--X position validation errors-->
+            <mat-error *ngIf="placeForm.get('x').hasError('required')">Please enter X position of toy</mat-error>
+            <mat-error *ngIf="placeForm.get('x').hasError('max')">Please enter value less than or equal to 5
+            </mat-error>
+            <mat-error *ngIf="placeForm.get('x').hasError('min')">Please enter value grater than or equal to 0
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Y Position</mat-label>
+            <!--Y position validation errors-->
+            <input matInput type="number" formControlName="y">
+            <mat-error *ngIf="placeForm.get('y').hasError('required')">Please enter Y position of toy</mat-error>
+            <mat-error *ngIf="placeForm.get('y').hasError('max')">Please enter value less than or equal to 5
+            </mat-error>
+            <mat-error *ngIf="placeForm.get('y').hasError('min')">Please enter value grater than or equal to 0
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Face</mat-label>
+            <mat-select formControlName="face" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let face of faces" [value]="face.value" [innerText]="face.name">
+                </mat-option>
+            </mat-select>
+            <!--Face validation errors-->
+            <mat-error *ngIf="placeForm.get('face').hasError('required')">Please choose face of toy</mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-button type="submit" cdkFocusInitial>Place</button>
+    </div>
+</form>

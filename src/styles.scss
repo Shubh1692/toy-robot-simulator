@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+// Import angular material indigo-pink theme
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body, html, app-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    background-color: #d3d3d3;
+}
+app-root { 
+  display: block;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-form-field {
+  width: 100% !important;
+}
+
+.list-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+}
